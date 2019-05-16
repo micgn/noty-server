@@ -1,0 +1,4 @@
+basicauth:
+  password: 12345
+
+host: xyz.de

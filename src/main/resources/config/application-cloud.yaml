@@ -1,0 +1,22 @@
+host: ${HOST}
+
+basicauth:
+  user: noty
+  password: ${BASICAUTH_PASSWORD}
+
+spring:
+  datasource:
+    url: jdbc:hsqldb:file:${DATABASE_PATH}
+    username: sa
+    password:
+    min-idle: 2
+    max-idle: 2
+    max-active: 5
+    test-on-borrow: true
+    validation-query: SELECT 1
+  jpa.hibernate.ddl-auto: update
+  jpa.properties.hibernate.dialect: org.hibernate.dialect.HSQLDialect
+
+logging:
+  level:
+    de.mg.notyserver: DEBUG
